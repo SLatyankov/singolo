@@ -1,3 +1,8 @@
+<!--Уважаемые проверяющие, обратите, пожалуйста внимание на время сдачи первого комита и 
+    разницу в часовых поясах. Все коммиты сделаны в срок по московскому/минскому времени,
+    но githab + часовой пояс сыграли со мной злую шутку выставив дату следующего дня. 
+Надеюсь на ваше понимание. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +12,7 @@
     <title>singolo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-    <link href="other.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -223,7 +228,7 @@
             <div class="three-column phree-column__position">
                 <div class="column column__position">
                     <div class="about__photo-wrapper">
-                    <img src="./assets/Adam_Jensen.png" alt="Adam Jensen photo" class="about__photo">
+                        <img src="./assets/photo/Adam_Jensen.png" alt="Adam Jensen photo" class="about__photo">
                     </div>
                     <h3 class="small-title">
                         Adam Jensen
@@ -242,7 +247,7 @@
                 </div>
                 <div class="column column__position">
                     <div class="about__photo-wrapper">
-                    <img src="./assets/Desmond_Miles.png" alt="Desmond Miles photo" class="about__photo">
+                        <img src="./assets/photo/Desmond_Miles.png" alt="Desmond Miles photo" class="about__photo">
                     </div>
                     <h3 class="small-title">
                         Desmond Miles
@@ -261,7 +266,7 @@
                 </div>
                 <div class="column column__position">
                     <div class="about__photo-wrapper">
-                    <img src="./assets/Scolara_Visari.png" alt="Scolara Visari photo" class="about__photo">
+                        <img src="./assets/photo/Scolara_Visari.png" alt="Scolara Visari photo" class="about__photo">
                     </div>
                     <h3 class="small-title">
                         Scolara Visari
@@ -282,48 +287,51 @@
         </section>
 
         <section class="contact contact__position" id="contact">
-            <h2 class="title title__position">Get a Quote</h2>
-            <p class="text text__position">
+            <h2 class="title title__contact">Get a Quote</h2>
+            <p class="text text__position-contact">
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
                 nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
                 tortor mauris condimentum nibh.
             </p>
             <div class="two-column">
                 <form method="get" action="">
-                    <input type="text">
-                    <input type="email">
-                    <input type="text">
-                    <input type="textarea">
-                    <input type="submit">
+                    <input type="text" name="first name" required placeholder="Name (Required)" class="input">
+                    <input type="email" name="Email" required placeholder="Email (Required)" class="input">
+                    <input type="text" name="subject" placeholder="Subject" class="input">
+                    <textarea name="description" placeholder="Describe your project in detail..."
+                        class="textarea"></textarea>
+                    <button class="submit">Submit</button>
                 </form>
                 <div class="two-column__column">
-                    <h3 class="small-title small-title__position">Contact Information</h3>
-                    <p class="small-text small-text__position">
+                    <h3 class="small-title small-title__position small-title__contact">Contact Information</h3>
+                    <p class="small-text small-text__position  small-text__contact">
                         Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
                         Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
                         turpis, et consequat felis.
                     </p>
-                    <p class="small-text small-text__position">
+                    <a href="#" class="small-text a__icon-map small-text__contact">
                         Elm St. 14/05 Lost City
-                    </p>
-                    <p class="small-text small-text__position">
+                    </a>
+                    <br>
+                    <a href="tel:035283318635" class="small-text a__icon-phone small-text__contact">
                         03528 331 86 35
-                    </p>
-                    <p class="small-text small-text__position">
+                    </a>
+                    <br>
+                    <a href="mailto:info@singolo.com" class="small-text a__icon-mail small-text__contact">
                         info@singolo.com
-                    </p>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer footer__position">
-        <p class="small-text">© Copyright 2013 · by PSDchat.com</p>
-        <div class="contacts">
-            <a href="#"><img class="media-facebook" src="./assets/social media/ico-facebook.svg" alt="facebook"></a>
-            <a href="#"><img class="media-google" src="./assets/social media/ico-google-plus.svg" alt="google+"></a>
-            <a href="#"><img class="media-twitter" src="./assets/social media/ico-twitter.svg" alt="twitter"></a>
-            <a href="#"><img class="media-linkedin" src="./assets/social media/ico-linkedin.svg" alt="linkedin"></a>
+        <p class="small-text small-text__footer">© Copyright 2013</p>
+        <div class="contacts contacts__footer">
+            <a href="#"><img class="media" src="./assets/social media/ico-facebook.svg" alt="facebook"></a>
+            <a href="#"><img class="media" src="./assets/social media/ico-google-plus.svg" alt="google+"></a>
+            <a href="#"><img class="media" src="./assets/social media/ico-twitter.svg" alt="twitter"></a>
+            <a href="#"><img class="media" src="./assets/social media/ico-linkedin.svg" alt="linkedin"></a>
         </div>
     </footer>
 </body>

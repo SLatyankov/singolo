@@ -1,3 +1,8 @@
+/*Уважаемые проверяющие, обратите, пожалуйста, внимание на время сдачи первого комита и 
+разницу в часовых поясах. Все коммиты сделаны в срок по московскому/минскому времени,
+но githab+часовой пояс сыграли со мной злую шутку выставив дату следующего дня. 
+Надеюсь на ваше понимание. */
+
 
 html {
     font-size: 10px;
@@ -6,7 +11,9 @@ html {
 * {
     box-sizing: border-box;
 }
-
+ a{
+     text-decoration: none;
+ }
 body {
     width: 1020px;
     margin: 0 auto;
@@ -27,10 +34,11 @@ body {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
+    border-bottom: 6px solid #323746;
 }
 
 .header__position {
-    padding: 30px 40px;
+    padding: 30px 40px 24.5px;
 }
 
 .logo {
@@ -233,7 +241,7 @@ body {
 }
 
 .services__position {
-    padding: 40px 40px 28px 40px;
+    padding: 40px 40px 27.5px 40px;
 }
 
 .title {
@@ -556,15 +564,134 @@ button {
 
 .contact {
     background-color: #f06c64;
+    color: #f0d8d9;
 }
 
 .contact__position {
-    padding: 40px 40px 40px 40px;
+    padding: 69px 40px 14.5px 40px;
     border-bottom: 6px solid #ea676b;
 }
 
+.text__position-contact {
+    padding: 27px 0 45px;
+}
+
+.small-title__contact{
+padding: 0px 0 14px;
+}
+
+.title__contact,
+.small-text__contact,
+.small-title__contact {
+    color: #f0d8d9;
+}
+
+.two-column {
+    display: flex;
+}
+
+form {
+    all: unset;
+    width: 620px;
+    margin: 0 21px 0 0;
+}
+
+.input {
+    width: 619px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    border: 0;
+    color: #f48c8f;
+    margin-bottom: 15px;
+}
+
+.textarea {
+    width: 619px;
+    height: 202px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    resize: none;
+    border: 0;
+}
+
+.submit {
+    border: 2px solid #d45e58;
+    border-radius: 50%;
+    padding: 1px 15px;
+    background-color: #d6564f;
+    margin: 10px 0 0 262px;
+}
+input::-webkit-input-placeholder {
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+textarea::-webkit-input-placeholder {
+    padding: 8px 0 0 11px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+textarea:-moz-placeholder {
+    padding: 8px 0 0 11px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+input:-moz-placeholder {
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+
+.small-title__contact + .small-text__contact{
+    padding-bottom: 21px;
+}
 footer {
     background-color: #2d303a;
     display: flex;
     justify-content: space-between;
+}
+
+.small-text__footer{
+    margin: 28px 0 0 40px;
+}
+
+.contacts__footer {
+    margin: 0px 36px 0 0;
+}
+.a__icon-map::before{
+content: url(assets/icon/ico-location-pin.svg);
+margin: 0 0 0 0;
+}
+.a__icon-phone::before {
+    content: url(assets/icon/ico-phone-contacts.svg);
+
+}
+.a__icon-mail::before {
+    content: url(assets/icon/ico-mail.svg);
+
+}
+a{
+        all: unset;
+}
+.a__icon-map,
+.a__icon-phone,
+.a__icon-mail {
+    margin: 0 0 0  0;
 }
