@@ -11,9 +11,11 @@ html {
 * {
     box-sizing: border-box;
 }
- a{
-     text-decoration: none;
- }
+
+a {
+    text-decoration: none;
+}
+
 body {
     width: 1020px;
     margin: 0 auto;
@@ -90,8 +92,16 @@ body {
     padding: 231px 2px;
 }
 
+.slider__arrow-left {
+    min-width: 20px;
+}
+
 .vertical-phone {
     padding: 3px 52px;
+}
+
+.slider__arrow:hover {
+    display: none;
 }
 
 .vertical-phone__cam {
@@ -102,7 +112,8 @@ body {
     border: 3px solid #d8d8d8;
     border-radius: 50%;
     position: absolute;
-    margin: 16px 102px
+    margin: 16px 102px;
+    z-index: 2;
 }
 
 .vertical-phone__speaker {
@@ -112,6 +123,7 @@ body {
     background-color: #acacac;
     position: absolute;
     margin: 36px 90px;
+    z-index: 2;
 }
 
 .vertical-phone__display-container {
@@ -122,6 +134,7 @@ body {
     margin: 63px 11px;
     border: 3px solid #c5c5c5;
     background: black;
+    z-index: 2;
 }
 
 .vertical-phone__base {
@@ -130,6 +143,7 @@ body {
     height: 458px;
     border-radius: 27px;
     background-color: #f2f2f2;
+    z-index: 1;
 }
 
 .vertical-phone__display {
@@ -144,6 +158,7 @@ body {
     height: 16px;
     border: 1.5px solid #bababa;
     border-radius: 25%;
+    z-index: 3;
 }
 
 .vertical-phone__button-border {
@@ -155,14 +170,12 @@ body {
     background-color: #fafafa;
     position: absolute;
     margin: 408px 86px;
+    z-index: 2;
 }
 
 .horizontal-phone {
-    padding: 3px 143px;
-}
+    padding: 124px 22px;
 
-.horizontal-phone__shadow {
-    transform: scale(1, -1) rotate(-90deg);
 }
 
 .horizontal-phone__cam {
@@ -173,7 +186,8 @@ body {
     border: 3px solid #d8d8d8;
     border-radius: 50%;
     position: absolute;
-    margin: 224px 310px;
+    margin: 103px 430px;
+    z-index: 2;
 }
 
 .horizontal-phone__speaker {
@@ -182,8 +196,9 @@ body {
     border-radius: 3px;
     background-color: #acacac;
     position: absolute;
-    margin: 228px 280px;
+    margin: 105px 401px;
     transform: rotate(-90deg);
+    z-index: 2;
 }
 
 .horizontal-phone__display-container {
@@ -191,9 +206,10 @@ body {
     height: 194px;
     overflow: hidden;
     position: absolute;
-    margin: 133px -65px;
+    margin: 12px 56px;
     border: 3px solid #c5c5c5;
     background: black;
+    z-index: 3;
 }
 
 .horizontal-phone__base {
@@ -203,6 +219,8 @@ body {
     border-radius: 27px;
     background-color: #f2f2f2;
     transform: rotate(-90deg);
+    z-index: 2;
+    margin: -122px 0 0 120px;
 }
 
 .horizontal-phone__display {
@@ -212,11 +230,12 @@ body {
 .horizontal-phone__button {
     content: "";
     position: absolute;
-    margin: 220px -101px;
+    margin: 99px 20px;
     width: 16px;
     height: 16px;
     border: 1.5px solid #bababa;
     border-radius: 25%;
+    z-index: 3;
 }
 
 .horizontal-phone__button-border {
@@ -227,7 +246,8 @@ body {
     border-radius: 50%;
     background-color: #fafafa;
     position: absolute;
-    margin: 208px -114px;
+    margin: 87px 8px;
+    z-index: 2;
 }
 
 .slider__arrow-right {
@@ -270,6 +290,7 @@ body {
     display: flex;
     width: 300px;
 }
+
 
 .div-table__column+.div-table__column {
     margin-left: 20px;
@@ -320,16 +341,28 @@ body {
 
 .cell__text-content {
     margin-left: 17px;
+    width: 300px;
+    height: 88px;
+    margin-bottom: 34px;
+    overflow: hidden;
 }
 
 .small-title {
     line-height: 1.4rem;
     color: #666d89;
     font-weight: 900;
+    text-align: justify;
+    letter-spacing: -0.04px;
 }
+
+
 
 .small-title__position {
     padding: 0px 0 11px;
+}
+
+.small-text-adam {
+    letter-spacing: -0.3px;
 }
 
 .small-text {
@@ -472,11 +505,21 @@ button {
 }
 
 .about__position {
-    padding: 40px 40px 40px 38px;
+    padding: 40px 40px 40px 39px;
 }
 
 .about>.title {
     margin-left: 1px;
+}
+
+.small-title__overflow {
+    overflow: hidden;
+    height: 16px;
+    margin-bottom: 10px;
+}
+
+.contacts-adam{
+margin-left: -1px;
 }
 
 .text__position-about {
@@ -576,14 +619,18 @@ button {
     padding: 27px 0 45px;
 }
 
-.small-title__contact{
-padding: 0px 0 14px;
+.small-title__contact {
+    padding: 0px 0 14px;
 }
 
 .title__contact,
 .small-text__contact,
 .small-title__contact {
     color: #f0d8d9;
+}
+
+.contact__span {
+    letter-spacing: -0.005rem;
 }
 
 .two-column {
@@ -622,6 +669,7 @@ form {
     background-color: #d6564f;
     margin: 10px 0 0 262px;
 }
+
 input::-webkit-input-placeholder {
     padding: 0 0 0 15px;
     font-size: 12px;
@@ -631,6 +679,7 @@ input::-webkit-input-placeholder {
     font-weight: 400;
     text-align: left;
 }
+
 textarea::-webkit-input-placeholder {
     padding: 8px 0 0 11px;
     font-size: 12px;
@@ -640,6 +689,7 @@ textarea::-webkit-input-placeholder {
     font-weight: 400;
     text-align: left;
 }
+
 textarea:-moz-placeholder {
     padding: 8px 0 0 11px;
     font-size: 12px;
@@ -649,6 +699,7 @@ textarea:-moz-placeholder {
     font-weight: 400;
     text-align: left;
 }
+
 input:-moz-placeholder {
     padding: 0 0 0 15px;
     font-size: 12px;
@@ -659,39 +710,38 @@ input:-moz-placeholder {
     text-align: left;
 }
 
-.small-title__contact + .small-text__contact{
+.small-title__contact+.small-text__contact {
     padding-bottom: 21px;
 }
+
 footer {
     background-color: #2d303a;
     display: flex;
     justify-content: space-between;
 }
 
-.small-text__footer{
+.small-text__footer {
     margin: 28px 0 0 40px;
 }
 
 .contacts__footer {
     margin: 0px 36px 0 0;
 }
-.a__icon-map::before{
-content: url(assets/icon/ico-location-pin.svg);
-margin: 0 0 0 0;
+
+.a__icon-map::before {
+    content: url(assets/icon/ico-location-pin.svg);
 }
+
 .a__icon-phone::before {
     content: url(assets/icon/ico-phone-contacts.svg);
 
 }
+
 .a__icon-mail::before {
     content: url(assets/icon/ico-mail.svg);
 
 }
-a{
-        all: unset;
-}
-.a__icon-map,
-.a__icon-phone,
-.a__icon-mail {
-    margin: 0 0 0  0;
+
+a {
+    all: unset;
 }
