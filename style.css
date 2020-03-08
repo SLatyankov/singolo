@@ -1,7 +1,7 @@
-/*Уважаемые проверяющие, обратите, пожалуйста, внимание на время сдачи первого комита и 
+/*Уважаемые проверяющие, обратите, пожалуйста, внимание на время сдачи первого и третьего комитов и 
 разницу в часовых поясах. Все коммиты сделаны в срок по московскому/минскому времени,
 но githab+часовой пояс сыграли со мной злую шутку выставив дату следующего дня. 
-Надеюсь на ваше понимание. */
+Надеюсь на ваше понимание. и не забывайте отключить PixelPerfect при проверке интерактивности. Благодарю*/
 
 
 html {
@@ -67,6 +67,7 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 0 10px;
+    letter-spacing: -0.06px;
 }
 
 .nav__pointes:last-child {
@@ -518,8 +519,8 @@ button {
     margin-bottom: 10px;
 }
 
-.contacts-adam{
-margin-left: -1px;
+.contacts-adam {
+    margin-left: -1px;
 }
 
 .text__position-about {
@@ -620,7 +621,7 @@ margin-left: -1px;
 }
 
 .small-title__contact {
-    padding: 0px 0 14px;
+    padding: 2px 0 13px;
 }
 
 .title__contact,
@@ -650,7 +651,7 @@ form {
     background-color: #d6564f;
     border: 0;
     color: #f48c8f;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .textarea {
@@ -681,7 +682,7 @@ input::-webkit-input-placeholder {
 }
 
 textarea::-webkit-input-placeholder {
-    padding: 8px 0 0 11px;
+    padding: 5px 0 0 11px;
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
@@ -691,7 +692,7 @@ textarea::-webkit-input-placeholder {
 }
 
 textarea:-moz-placeholder {
-    padding: 8px 0 0 11px;
+    padding: 5px 0 0 11px;
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
@@ -721,7 +722,7 @@ footer {
 }
 
 .small-text__footer {
-    margin: 28px 0 0 40px;
+    margin: 27px 0 0 41px;
 }
 
 .contacts__footer {
@@ -730,18 +731,33 @@ footer {
 
 .a__icon-map::before {
     content: url(assets/icon/ico-location-pin.svg);
+    position: absolute;
+    margin: 3px 0px 0 -23px;
 }
 
 .a__icon-phone::before {
     content: url(assets/icon/ico-phone-contacts.svg);
-
+    position: absolute;
+    margin: 2px 0 0 -22px;
 }
 
 .a__icon-mail::before {
     content: url(assets/icon/ico-mail.svg);
-
+    position: absolute;
+    margin: 5px 0 0 -27px;
 }
 
-a {
-    all: unset;
+.a__icon-map {
+    position: absolute;
+    margin: 1px 0 0 23px
+}
+
+.a__icon-phone {
+    position: absolute;
+    margin: -7px 0 0 22px
+}
+
+.a__icon-mail {
+    position: absolute;
+    margin: -15px 0 0 24px;
 }
