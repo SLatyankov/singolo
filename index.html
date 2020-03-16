@@ -1,9 +1,3 @@
-<!--Уважаемые проверяющие, обратите, пожалуйста внимание на время сдачи первого и третьего комитов и 
-    разницу в часовых поясах. Все коммиты сделаны в срок по московскому/минскому времени,
-    но githab + часовой пояс сыграли со мной злую шутку выставив дату следующего дня. Надеюсь на ваше понимание. Благодарю. 
-    и не забывайте отключить PixelPerfect при проверке интерактивности. 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +13,8 @@
 <body>
     <header class="header header__position">
         <h1 class="logo">singolo<span class="logo__star">*</span></h1>
-        <nav class="nav nav__position">
-            <a href="#slider" class="nav__pointes">home</a>
+        <nav class="nav nav__position" id="menu">
+            <a href="#slider" class="nav__pointes active">home</a>
             <span class="nav__delimiter">·</span>
             <a href="#services" class="nav__pointes">services</a>
             <span class="nav__delimiter">·</span>
@@ -38,11 +32,11 @@
             </div>
 
             <div class="vertical-phone">
-                <img src="assets/slider/Base.svg" alt=" " class="vertical-phone__base">
+                <img src="assets/slider/Base.svg" alt=" " class="vertical-phone__base" id="vertical_phone">
                 <div class="vertical-phone__cam"></div>
                 <div class="vertical-phone__speaker"></div>
                 <div class="vertical-phone__display-container">
-                    <img src="assets/slider/display.svg" alt=" " class="vertical-phone__display">
+                    <img src="assets/slider/display.svg" alt=" " class="vertical-phone__display" id="display1">
                 </div>
                 <div class="vertical-phone__button-border"></div>
                 <div class="vertical-phone__button"></div>
@@ -51,17 +45,23 @@
 
             <div class="horizontal-phone">
 
-                <img src="assets/slider/Base.svg" alt=" " class="horizontal-phone__base">
+                <img src="assets/slider/Base.svg" alt=" " class="horizontal-phone__base" id="horizontal_phone">
                 <div class="horizontal-phone__cam"></div>
                 <div class="horizontal-phone__speaker"></div>
                 <div class="horizontal-phone__display-container">
-                    <img src="assets/slider/display2.svg" alt=" " class="horizontal-phone__display">
+                    <img src="assets/slider/display2.svg" alt=" " class="horizontal-phone__display" id="display2">
                 </div>
                 <div class="horizontal-phone__button-border"></div>
                 <div class="horizontal-phone__button"></div>
                 <img src="assets/slider/Shadow(1).svg" alt=" " class="horizontal-phone__shadow">
 
 
+            </div>
+
+            <div class="inner_slid">
+                <img src="assets/slider/slider-content1.png" alt="phone" class="inner_phone1">                
+                <img src="assets/slider/slider-content2.png" alt="phone" class="inner_phone2">
+                <img src="assets/slider/slider-content3.png" alt="phone" class="inner_phone3">
             </div>
             <div class="slider__arrow-right">
                 <img src="assets/slider/arrow.svg" alt="go to next slide" class="slider__arrow">
@@ -173,47 +173,47 @@
                 eget
                 lacinia odio sem nec elit.
             </p>
-            <div class="tags-blok tags-blok__position">
-                <button class="tag tag-All">All</button>
-                <button class="tag tag-Web">Web Design</button>
-                <button class="tag tag-Graphic">Graphic Design</button>
-                <button class="tag tag-Artwork">Artwork</button>
+            <div class="tags-blok tags-blok__position" id="tags">
+                <button class="tag active">All</button>
+                <button class="tag ">Web Design</button>
+                <button class="tag ">Graphic Design</button>
+                <button class="tag ">Artwork</button>
             </div>
-            <div class="images-basket images-basket__position">
-                <div class="images-basket__img-wrapper images-basket__img-wrapper-left">
+            <div class="images-basket images-basket__position" id="images">
+                <div tabindex="1" class="images-basket__img-wrapper  images-basket__img-wrapper-left">
                     <img class="images-basket__img-1" src="./assets/portfolio/1.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper">
+                <div tabindex="2" class="images-basket__img-wrapper">
                     <img class="images-basket__img-2" src="./assets/portfolio/2.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper">
+                <div tabindex="3" class="images-basket__img-wrapper">
                     <img class="images-basket__img-3" src="./assets/portfolio/3.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper images-basket__img-wrapper-right">
+                <div tabindex="4" class="images-basket__img-wrapper images-basket__img-wrapper-right">
                     <img class="images-basket__img-4" src="./assets/portfolio/4.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper images-basket__img-wrapper-left">
+                <div tabindex="5" class="images-basket__img-wrapper images-basket__img-wrapper-left">
                     <img class="images-basket__img-5" src="./assets/portfolio/5.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper">
+                <div tabindex="6" class="images-basket__img-wrapper">
                     <img class="images-basket__img-6" src="./assets/portfolio/6.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper">
+                <div tabindex="7" class="images-basket__img-wrapper">
                     <img class="images-basket__img-7" src="./assets/portfolio/7.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper images-basket__img-wrapper-right">
+                <div tabindex="8" class="images-basket__img-wrapper images-basket__img-wrapper-right">
                     <img class="images-basket__img-8" src="./assets/portfolio/8.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper  images-basket__img-wrapper-left">
+                <div tabindex="9" class="images-basket__img-wrapper  images-basket__img-wrapper-left">
                     <img class="images-basket__img-9" src="./assets/portfolio/9.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper">
+                <div tabindex="10" class="images-basket__img-wrapper">
                     <img class="images-basket__img-10" src="./assets/portfolio/10.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper">
+                <div tabindex="11" class="images-basket__img-wrapper">
                     <img class="images-basket__img-11" src="./assets/portfolio/11.svg" alt="image">
                 </div>
-                <div class="images-basket__img-wrapper images-basket__img-wrapper-right">
+                <div tabindex="12" class="images-basket__img-wrapper images-basket__img-wrapper-right">
                     <img class="images-basket__img-12" src="./assets/portfolio/12.svg" alt="image">
                 </div>
             </div>
@@ -303,12 +303,13 @@
             </p>
             <div class="two-column">
                 <form method="get" action="">
-                    <input type="text" name="first name" required placeholder="Name (Required)" class="input">
-                    <input type="email" name="Email" required placeholder="Email (Required)" class="input">
-                    <input type="text" name="subject" placeholder="Subject" class="input">
+                    <input type="text" name="first name" required placeholder="Name (Required)" class="input" id="name_exp">
+                    <input type="email" name="Email" required placeholder="Email (Required)" class="input"
+                        id="mail_exp">
+                    <input type="text" name="subject" placeholder="Subject" class="input" id="subject_exp">
                     <textarea name="description" placeholder="Describe your project in detail..."
-                        class="textarea"></textarea>
-                    <button class="submit">Submit</button>
+                        class="textarea" id="textarea_exp"></textarea>
+                    <button class="submit" id="submit" onsubmit="return false;">Submit</button>
                 </form>
                 <div class="two-column__column">
                     <h3 class="small-title small-title__position small-title__contact">Contact Information</h3>
@@ -331,6 +332,16 @@
                     </a>
                 </div>
             </div>
+            <div id="message-block" class="hidden">
+                <div id="message">
+                    <p>
+                        Письмо отправлено<br>Тема: <span id="subject_imp"></span><br>
+                        Описание: <span id="textarea_imp"></span>
+                    </p>
+                    <br>
+                    <button id="close-btn">OK</button>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -343,6 +354,7 @@
             <a href="#"><img class="media" src="./assets/social media/ico-linkedin.svg" alt="linkedin"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
