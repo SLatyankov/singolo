@@ -1,5 +1,6 @@
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -24,6 +25,9 @@ body {
 }
 
 .header {
+    position: fixed;
+    z-index: 10;
+    width: 1020px;
     font-weight: bold;
     background-color: #2D303A;
     color: #fff;
@@ -77,15 +81,16 @@ body {
     border: 1px solid #e7a6a3;
 }
 
-.slider {
-    background-color: #f06c64;
-    display: flex;
-    height: 600px;
-    border-bottom: 6px solid #ea676b;
+.empty {
+    height: 95px;
 }
 
-.slider__position {
-    padding: 50px 40px;
+.slider-wrapper {
+    padding: 50px 40px;    
+    display: flex;
+    background-color: #f06c64;
+    height: 600px;
+    border-bottom: 6px solid #ea676b;    
 }
 
 .slider__arrow {
@@ -249,25 +254,28 @@ body {
     z-index: 2;
 }
 
-.inner_slid{
+.inner_slid {
     display: none;
 }
 
-.inner_color{
-        background-color: #648BF0;
-        border-bottom: 6px solid rgb(94, 127, 212);
+.inner_color {
+    background-color: #648BF0;
+    border-bottom: 6px solid rgb(94, 127, 212);
 }
 
-.inner_phone1{
-margin: 0px 0 0 319px;
+.inner_phone1 {
+    margin: 0px 0 0 319px;
     position: absolute;
 }
+
 .inner_phone2 {
     margin: 92px 0 0 186px;
 }
+
 .inner_phone3 {
     margin: 0 132px 0 202px;
 }
+
 .slider__arrow-right {
     transform: rotate(180deg);
     padding: 4px 31px;
@@ -308,7 +316,6 @@ margin: 0px 0 0 319px;
     display: flex;
     width: 300px;
 }
-
 
 .div-table__column+.div-table__column {
     margin-left: 20px;
@@ -373,8 +380,6 @@ margin: 0px 0 0 319px;
     letter-spacing: -0.04px;
 }
 
-
-
 .small-title__position {
     padding: 0px 0 11px;
 }
@@ -396,16 +401,24 @@ margin: 0px 0 0 319px;
 
 .portfolio {
     background-color: #2d303a;
-    padding: 40px 40px 67px 40px;
+    padding: 40px 30px 67px 30px;
     border-bottom: 6px solid #323746;
 }
 
+.title__position-portfolio {
+    margin-left: 10px;
+}
+
 .text__position-portfolio {
-    padding: 27px 0 5px;
+    padding: 27px 0 5px 10px;
 }
 
 button {
     all: unset;
+}
+
+.tags-blok__position {
+    margin-left: 10px;
 }
 
 .tag {
@@ -454,16 +467,6 @@ button {
     height: 187px;
     margin: 10px;
     overflow: hidden;
-}
-
-
-
-.images-basket__img-wrapper-left {
-    margin-left: 0;
-}
-
-.images-basket__img-wrapper-right {
-    margin-right: 0;
 }
 
 .images-basket__img-wrapper:focus {
@@ -788,12 +791,12 @@ footer {
 
 .a__icon-map {
     position: absolute;
-    margin: 1px 0 0 23px
+    margin: 1px 0 0 23px;
 }
 
 .a__icon-phone {
     position: absolute;
-    margin: -7px 0 0 22px
+    margin: -7px 0 0 22px;
 }
 
 .a__icon-mail {
