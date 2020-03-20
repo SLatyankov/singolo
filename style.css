@@ -81,29 +81,100 @@ body {
     border: 1px solid #e7a6a3;
 }
 
+.slider {
+    scroll-margin-top: 95px;
+}
+
 .empty {
     height: 95px;
 }
 
 .slider-wrapper {
-    padding: 50px 40px;    
+    padding: 50px 40px;
     display: flex;
     background-color: #f06c64;
     height: 600px;
-    border-bottom: 6px solid #ea676b;    
+    border-bottom: 6px solid #ea676b;
+}
+
+.blue {
+    background-color: #648BF0;
+    border-bottom: 6px solid rgb(117, 148, 228);
 }
 
 .slider__arrow {
     padding: 231px 2px;
+    cursor: pointer;
 }
 
 .slider__arrow-left {
     min-width: 20px;
 }
 
-.slider__arrow:hover {
+.slide {
     display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
 }
+
+.slide.active {
+    display: flex;
+}
+.slide.active.blok {
+    display: block;
+}
+.slide.next {
+    display: flex;
+}
+
+.slide.next.blok {
+    display: block;
+}
+
+.next {
+    position: absolute;
+    top: 146px;
+    width: 100%;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 17%;
+    }
+
+    to {
+        left: -167%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 133%;
+    }
+
+    to {
+        left: 17%;
+    }
+}
+
 
 .vertical-phone {
     padding: 3px 52px;
@@ -273,15 +344,16 @@ body {
 }
 
 .inner_phone3 {
-    margin: 0 132px 0 202px;
+    margin: 0px 163px 0 202px;
 }
 
 .slider__arrow-right {
     transform: rotate(180deg);
-    padding: 4px 31px;
+    padding: 4px 31px 4px 0;
 }
 
 .services {
+    scroll-margin-top: 95px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #fff;
 }
@@ -400,6 +472,7 @@ body {
 }
 
 .portfolio {
+    scroll-margin-top: 95px;
     background-color: #2d303a;
     padding: 40px 30px 67px 30px;
     border-bottom: 6px solid #323746;
@@ -522,6 +595,7 @@ button {
 }
 
 .about {
+    scroll-margin-top: 95px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
 }
@@ -737,12 +811,14 @@ input:-moz-placeholder {
 }
 
 #message-block {
-    position: absolute;
+
+    position: fixed;
     width: 100vw;
     height: 100vw;
     top: 0;
     left: 0;
     background: #0008;
+    z-index: 11;
 }
 
 #message-block.hidden {
