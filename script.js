@@ -11,7 +11,7 @@ MENU.addEventListener('click', (event) => {
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
-    const CURPOS = window.scrollY;
+    const CURPOS = window.scrollY + 105;
     const SECTIONS = document.querySelectorAll('main>section');
     const LINKS = document.querySelectorAll('nav>a');
 
@@ -48,7 +48,7 @@ let slides = document.querySelectorAll('.slide');
 let currentSlides = 0;
 let isEnabled = true;
 
-function changeCurrentSlides (n) {
+function changeCurrentSlides(n) {
     currentSlides = (n + slides.length) % slides.length;
 }
 
@@ -72,7 +72,7 @@ function showSlid(direction) {
 function previousSlid(n) {
     hideSlid('to-right');
     changeCurrentSlides(n - 1);
-    showSlid('from-left');   
+    showSlid('from-left');
 }
 
 function nextSlid(n) {
@@ -109,21 +109,46 @@ TAGS.addEventListener('click', (event) => {
 
 /*отправка формы*/
 const BUTTON = document.getElementById('submit');
+const subjectExp = document.getElementById('subject_exp');
+const textarea = document.getElementById('textarea_exp');
+let subjectImp = document.getElementById('subject_imp');
+let textareaImp = document.getElementById('textarea_imp');
+const name = document.getElementById('name_exp');
+const mail = document.getElementById('mail_exp');
+
+
+function subject(string) {
+    if (string === '') {
+        return 'Без темы';
+    } else {
+        return 'Тема: ' + string;
+    }
+}
+
+function describe(string) {
+    if (string === '') {
+        return 'Без описания';
+    } else {
+        return 'Описание: ' + string;
+    }
+}
+
 
 BUTTON.addEventListener('click', (event) => {
-    const subject = document.getElementById('subject_exp').value.toString();
-    document.getElementById('subject_imp').innerText = subject;
-    const textarea = document.getElementById('textarea_exp').value.toString();
-    document.getElementById('textarea_imp').innerText = textarea;
-    document.getElementById('message-block').classList.remove('hidden');
+    event.preventDefault();
+    if (name.checkValidity() && mail.checkValidity()) {
+        subjectImp.innerText = subject(subjectExp.value.toString());
+        textareaImp.innerText = describe(textarea.value.toString());
+        document.getElementById('message-block').classList.remove('hidden');
+    }
+
 });
 
 /*очистка полей*/
 const CLOSE_BUTTON = document.getElementById('close-btn');
 
 CLOSE_BUTTON.addEventListener('click', (event) => {
-    document.getElementById('subject_imp').innerText = '';
-    document.getElementById('textarea_imp').innerText = '';
+    document.querySelectorAll('input').forEach(el => el.value = '');
+    textarea.value = '';
     document.getElementById('message-block').classList.add('hidden');
 });
-

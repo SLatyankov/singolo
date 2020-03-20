@@ -766,7 +766,7 @@ form {
     margin: 10px 0 0 262px;
 }
 
-input::-webkit-input-placeholder {
+input::placeholder {
     padding: 0 0 0 15px;
     font-size: 12px;
     line-height: 22px;
@@ -776,7 +776,7 @@ input::-webkit-input-placeholder {
     text-align: left;
 }
 
-textarea::-webkit-input-placeholder {
+textarea::placeholder {
     padding: 5px 0 0 11px;
     font-size: 12px;
     line-height: 22px;
@@ -786,25 +786,6 @@ textarea::-webkit-input-placeholder {
     text-align: left;
 }
 
-textarea:-moz-placeholder {
-    padding: 5px 0 0 11px;
-    font-size: 12px;
-    line-height: 22px;
-    color: #f48c8f;
-    font-family: "Lato";
-    font-weight: 400;
-    text-align: left;
-}
-
-input:-moz-placeholder {
-    padding: 0 0 0 15px;
-    font-size: 12px;
-    line-height: 22px;
-    color: #f48c8f;
-    font-family: "Lato";
-    font-weight: 400;
-    text-align: left;
-}
 
 .small-title__contact+.small-text__contact {
     padding-bottom: 21px;
@@ -812,11 +793,11 @@ input:-moz-placeholder {
 
 #message-block {
 
-    position: fixed;
-    width: 100vw;
-    height: 100vw;
-    top: 0;
-    left: 0;
+    position: absolute;
+    margin-left: -100px;
+    width: 1145px;
+    height: 1200px;
+    top: 2306px;
     background: #0008;
     z-index: 11;
 }
@@ -827,9 +808,8 @@ input:-moz-placeholder {
 
 #message {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 2px solid yellow;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
     text-align: center;
 }
 
