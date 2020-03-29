@@ -565,7 +565,7 @@ button {
 }
 
 .tag:hover {
-    background-color: rgb(220, 221, 228);
+    background-color: rgb(173, 174, 180);
 }
 
 .tag-Artwork {
@@ -582,12 +582,14 @@ button {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    width: 960px;
+    max-width: 960px;
+    width: calc(100vw - 60px);
     height: 610px;
 }
 
 .images-basket__img-wrapper {
-    width: 220px;
+    max-width: 220px;
+    width: calc((100vw - 140px)/4);
     height: 187px;
     margin: 10px;
     overflow: hidden;
@@ -961,11 +963,7 @@ li {
     height: 100vh;
 }
 
-@media (max-width: 768px) {
-    .header {
-        max-width: 768px;
-        width: 100%;
-    }
+@media (max-width: 1018px) {
 
     .slider-wrapper {
         padding: 38px 29px;
@@ -1096,6 +1094,16 @@ li {
     .inner_phone3 {
         margin: 0px 109px 0 156px;
         width: 129px;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .header {
+        max-width: 768px;
+        width: 100%;
     }
 
     .services__position {

@@ -7,13 +7,14 @@ MENU.addEventListener('click', (event) => {
 });
 
 /*переключение меню при скролле*/
-    const CURPOS = window.scrollY + 105;
-    const SECTIONS = document.querySelectorAll('main>section');
-    const LINKS = document.querySelectorAll('nav>a');
-    const HAMBURGER_LINKS = document.querySelectorAll('li>a');
+
+const HAMBURGER_LINKS = document.querySelectorAll('li>a');
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
+    const CURPOS = window.scrollY + 105;
+    const SECTIONS = document.querySelectorAll('main>section');
+    const LINKS = document.querySelectorAll('nav>a');
     SECTIONS.forEach((el) => {
         if (el.offsetTop <= CURPOS && (el.offsetTop + el.offsetHeight) > CURPOS) {
             LINKS.forEach((a) => {
