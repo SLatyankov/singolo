@@ -7,14 +7,13 @@ MENU.addEventListener('click', (event) => {
 });
 
 /*переключение меню при скролле*/
-
-document.addEventListener('scroll', onScroll);
-
-function onScroll(event) {
     const CURPOS = window.scrollY + 105;
     const SECTIONS = document.querySelectorAll('main>section');
     const LINKS = document.querySelectorAll('nav>a');
+    const HAMBURGER_LINKS = document.querySelectorAll('li>a');
+document.addEventListener('scroll', onScroll);
 
+function onScroll(event) {
     SECTIONS.forEach((el) => {
         if (el.offsetTop <= CURPOS && (el.offsetTop + el.offsetHeight) > CURPOS) {
             LINKS.forEach((a) => {
@@ -23,9 +22,35 @@ function onScroll(event) {
                     a.classList.add('active');
                 };
             })
+            HAMBURGER_LINKS.forEach((a) => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                };
+            })
         }
     })
 }
+
+/* гамбургер*/
+const HAMBURGER = document.querySelectorAll('.hamburger');
+const HAMBURGER_MENU = document.getElementById('hamburger-menu');
+
+
+HAMBURGER.forEach(element => {
+    element.addEventListener('click', (event) => {
+        HAMBURGER_MENU.classList.toggle('hidden');
+    });
+});
+
+HAMBURGER_LINKS.forEach(element => {
+    element.addEventListener('click', (event) => {
+        HAMBURGER_MENU.classList.add('hidden');
+    });
+});
+
+
+
 
 /*Экраны телефонов*/
 const V_PHONE = document.getElementById('vertical_phone');

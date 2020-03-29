@@ -118,10 +118,10 @@ body {
     color: #f06c64;
 }
 
-.nav__pointes:hover {
+/*.nav__pointes:hover {
     color: #e7a6a3;
     border: 1px solid #e7a6a3;
-}
+}*/
 
 /*----------------------------------------------
 ------------------Slider------------------------
@@ -915,9 +915,51 @@ footer {
     display: none;
 }
 
-/*@media (max-width: 1300px) {
+#hamburger-menu {
+    position: fixed;
+    z-index: 11;
+    background: #0008;
+    width: 375px;
+    height: 100vh;
+}
 
-}*/
+.hamburger__ul {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.hamburger__header>.hamburger {
+    margin: 22px;
+    transform: rotate(-90deg);
+}
+
+.hamburger__header>.logo {
+    font-size: 20px;
+    margin: 18px 5px;
+}
+
+ul {
+    margin: 170px 0 0 70px;
+}
+
+li {
+    margin: 13px 0;
+}
+
+.hamburger__header {
+    display: flex;
+}
+
+.hamburger__content {
+    background: #2D303A;
+    box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    width: 278px;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+}
 
 @media (max-width: 768px) {
     .header {
@@ -1084,10 +1126,12 @@ footer {
     .tags-blok__position {
         margin: 0 10px 8px;
     }
+
     .images-basket {
         width: 720px;
         height: 816px;
     }
+
     .images-basket__img-wrapper {
         width: 216px;
         height: 184px;
@@ -1097,6 +1141,7 @@ footer {
     .about__position {
         padding: 52px 40px 40px 39px;
     }
+
     .text__position-about {
         padding: 27px 0 14px 1px;
     }
@@ -1193,6 +1238,7 @@ footer {
 
     .logo {
         font-size: 20px;
+        font-weight: bold;
         margin: auto;
     }
 
@@ -1343,6 +1389,7 @@ footer {
     .cell {
         margin: 14px 40px -2px 10px;
     }
+
     .cell__text-content {
         margin-bottom: 20px;
     }
@@ -1462,6 +1509,38 @@ footer {
 
     .contacts__footer {
         margin: 11px auto 0;
+    }
+
+    .images-basket__img-2 {
+        margin: 2px -13px;
+    }
+
+    .images-basket__img-4 {
+        margin: 2px -16px;
+    }
+
+    .images-basket__img-6 {
+        margin: 1px -17px;
+    }
+
+    .images-basket__img-7 {
+        margin: -42px -15px;
+    }
+
+    .images-basket__img-8 {
+        margin: -31px -15px;
+    }
+
+    .images-basket__img-12 {
+        margin: -60px -6px;
+    }
+
+    .images-basket__img-11 {
+        margin: -109px -9px;
+    }
+
+    .images-basket__img-10 {
+        margin: -141px -12px;
     }
 
 }
