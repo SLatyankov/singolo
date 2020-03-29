@@ -525,7 +525,7 @@ body {
 .portfolio {
     scroll-margin-top: 95px;
     background-color: #2d303a;
-    padding: 40px 30px 67px 30px;
+    padding: 69px 30px 67px 30px;
     border-bottom: 6px solid #323746;
 }
 
@@ -584,13 +584,15 @@ button {
     overflow: hidden;
     max-width: 960px;
     width: calc(100vw - 60px);
-    height: 610px;
+    max-height: 610px;
+    height: calc((100vw - 60px)*0.635);
 }
 
 .images-basket__img-wrapper {
     max-width: 220px;
     width: calc((100vw - 140px)/4);
-    height: 187px;
+    max-height: 197px;
+    height: calc((100vw - 140px)/4.7);
     margin: 10px;
     overflow: hidden;
 }
@@ -793,7 +795,8 @@ form {
 }
 
 .input {
-    width: 619px;
+    max-width: 619px;
+    width: 60vw;
     height: 38px;
     border-radius: 5px;
     background-color: #d6564f;
@@ -803,8 +806,9 @@ form {
 }
 
 .textarea {
-    width: 619px;
-    height: 202px;
+    max-width: 619px;
+    width: 60vw;
+    height: 159px;
     border-radius: 5px;
     background-color: #d6564f;
     resize: none;
@@ -813,10 +817,10 @@ form {
 
 .submit {
     border: 2px solid #d45e58;
-    border-radius: 50%;
-    padding: 1px 15px;
+    border-radius: 36%;
+    padding: 3px 39px;
     background-color: #d6564f;
-    margin: 10px 0 0 262px;
+        margin: 6px 0 41px 0px;
 }
 
 input::placeholder {
@@ -1136,13 +1140,14 @@ li {
     }
 
     .images-basket {
-        width: 720px;
+        max-width: 720px;
         height: 816px;
     }
 
     .images-basket__img-wrapper {
-        width: 216px;
-        height: 184px;
+        max-width: 216px;
+        width: calc((100vw - 140px)/3);
+        height: calc((100vw - 140px)/3,55);
         margin: 10px;
     }
 
