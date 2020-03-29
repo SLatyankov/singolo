@@ -408,7 +408,7 @@ body {
 }
 
 .services__position {
-    padding: 40px 40px 27.5px 40px;
+    padding: 40px 30px 27.5px;
 }
 
 .title {
@@ -421,21 +421,23 @@ body {
 }
 
 .title__position {
-    margin-top: 29px;
+    margin: 29px 10px 0;
 }
 
 .text__position {
-    padding: 27px 0 49px;
+    padding: 27px 10px 49px;
     text-align: justify;
 }
 
 .div-table {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .cell {
     display: flex;
     width: 300px;
+    margin: 0 10px;
 }
 
 .div-table__column+.div-table__column {
@@ -1054,13 +1056,136 @@ footer {
         width: 129px;
     }
 
+    .services__position {
+        padding: 40px 30px 14.5px;
+    }
+
     .title__position {
         margin-top: 8px;
     }
 
     .text__position {
-        padding: 27px 0 40px;
+        padding: 27px 10px 40px;
     }
+
+    .cell {
+        margin: 0 40px 22px 10px;
+    }
+
+    .portfolio {
+        padding: 66px 30px 57px 30px;
+    }
+
+    .text__position-portfolio {
+        font-size: 1.8rem;
+        padding: 27px 16px 7px 10px;
+    }
+
+    .tags-blok__position {
+        margin: 0 10px 8px;
+    }
+    .images-basket {
+        width: 720px;
+        height: 816px;
+    }
+    .images-basket__img-wrapper {
+        width: 216px;
+        height: 184px;
+        margin: 10px;
+    }
+
+    .about__position {
+        padding: 52px 40px 40px 39px;
+    }
+    .text__position-about {
+        padding: 27px 0 14px 1px;
+    }
+
+    .about__photo-wrapper {
+        width: 219px;
+        height: 219px;
+    }
+
+    .about__photo {
+        width: 223px;
+    }
+
+    .small-title {
+        line-height: 1.3rem;
+    }
+
+    .small-title__overflow {
+        margin: -3px 0 1px;
+    }
+
+    .column {
+        width: 220px;
+        margin: 0 1px 0 4px;
+    }
+
+    .contacts {
+        padding: 0px 0px 27px 0px;
+    }
+
+    .contact__position {
+        padding: 69px 40px 40.5px 40px;
+    }
+
+    .title__contact {
+        margin-top: -4px;
+    }
+
+    .text__position-contact {
+        padding: 27px 0 26px;
+    }
+
+    .input {
+        width: 442px;
+        margin-bottom: 12px;
+    }
+
+    .textarea {
+        width: 442px;
+        height: 159px;
+    }
+
+    form {
+        margin: 0 27px 0 0;
+    }
+
+    .small-title__contact {
+        padding: 2px 0 6px;
+    }
+
+    .submit {
+        border-radius: 8%;
+        padding: 1px 39px;
+        margin: 9px 0 0;
+    }
+
+    .a__icon-map {
+        margin: -10px 0 0 23px;
+    }
+
+    .a__icon-phone {
+        margin: -16px 0 0 22px;
+    }
+
+    .a__icon-mail {
+        margin: -24px 0 0 24px;
+    }
+
+    .contacts__footer {
+        margin: 11px 36px 0 0;
+    }
+
+
+
+
+
+
+
+
 
 }
 
