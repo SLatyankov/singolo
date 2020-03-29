@@ -12,7 +12,8 @@ a {
 }
 
 body {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     margin: 0 auto;
     font-size: 1.8rem;
     font-family: 'Lato',
@@ -24,10 +25,15 @@ body {
     text-align: justify;
 }
 
+/*-------------------------------------------------
+----------------------Header-----------------------
+--------------------------------------------------*/
+
 .header {
     position: fixed;
     z-index: 10;
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     font-weight: bold;
     background-color: #2D303A;
     color: #fff;
@@ -40,6 +46,42 @@ body {
 .header__position {
     padding: 30px 40px 24.5px;
 }
+
+.hamburger__line,
+.hamburger__line::before,
+.hamburger__line::after {
+    display: inline-block;
+    background: #fff;
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+}
+
+.hamburger__line::before {
+    top: 9px;
+    left: 0;
+}
+
+.hamburger__line {
+    top: calc(50% - 1px);
+    left: 0;
+}
+
+.hamburger__line::after {
+    bottom: 9px;
+    left: 0;
+}
+
+.hamburger {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    margin: 3px 0 0 7px;
+    display: none;
+}
+
 
 .logo {
     font-size: 24px;
@@ -81,6 +123,11 @@ body {
     border: 1px solid #e7a6a3;
 }
 
+/*----------------------------------------------
+------------------Slider------------------------
+----------------------------------------------*/
+
+
 .slider {
     scroll-margin-top: 95px;
 }
@@ -120,9 +167,11 @@ body {
 .slide.active {
     display: flex;
 }
+
 .slide.active.blok {
     display: block;
 }
+
 .slide.next {
     display: flex;
 }
@@ -862,4 +911,283 @@ footer {
 
 .hidden {
     display: none;
+}
+
+/*@media (max-width: 1300px) {
+
+}*/
+
+@media (max-width: 768px) {
+    .header {
+        max-width: 768px;
+        width: 100%;
+    }
+
+    .slider-wrapper {
+        padding: 38px 29px;
+    }
+
+    .slider__arrow {
+        padding: 173px 2px;
+    }
+
+    .vertical-phone {
+        padding: 3px 36px;
+    }
+
+    .vertical-phone__base {
+        width: 162px;
+        height: 345px;
+        border-radius: 18px;
+    }
+
+    .vertical-phone__cam {
+        margin: 11px 75px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .vertical-phone__speaker {
+        width: 30px;
+        height: 4px;
+        margin: 26px 65px;
+    }
+
+    .vertical-phone__display-container {
+        width: 146px;
+        height: 253px;
+        margin: 49px 8px;
+    }
+
+    .vertical-phone__button-border {
+        width: 31px;
+        height: 30px;
+        margin: 306px 65px;
+    }
+
+    .vertical-phone__button {
+        margin: 315px 74px;
+        width: 13px;
+        height: 12px;
+    }
+
+    .vertical-phone__display {
+        width: 446px;
+        margin: -109px -14px;
+    }
+
+    .vertical-phone__shadow {
+        width: 182px;
+    }
+
+    .horizontal-phone__display {
+        width: 429px;
+        margin: -90px -92px;
+    }
+
+    .horizontal-phone {
+        padding: 96px 18px;
+    }
+
+    .horizontal-phone__base {
+        width: 160px;
+        height: 342px;
+        margin: -90px 0 0 91px;
+        border-radius: 15px;
+    }
+
+    .horizontal-phone__display-container {
+        width: 255px;
+        height: 146px;
+        margin: 9px 41px;
+    }
+
+    .horizontal-phone__shadow {
+        width: 361px;
+    }
+
+    .horizontal-phone__button {
+        margin: 73px 15px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .horizontal-phone__cam {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin: 76px 322px;
+    }
+
+    .horizontal-phone__speaker {
+        width: 27px;
+        height: 4px;
+        margin: 78px 300px;
+    }
+
+    .slider__arrow-right {
+        padding: 0px 23px 4px 0;
+    }
+
+    .slider-wrapper {
+        height: 453px;
+    }
+
+    .horizontal-phone__button-border {
+        width: 30px;
+        height: 30px;
+        margin: 65px 7px;
+    }
+
+    .inner_phone2 {
+        width: 129px;
+        margin: 56px 0 0 120px;
+    }
+
+    .inner_phone1 {
+        width: 192px;
+        margin: 0px 0 0 236px;
+    }
+
+    .inner_phone3 {
+        margin: 0px 109px 0 156px;
+        width: 129px;
+    }
+
+    .title__position {
+        margin-top: 8px;
+    }
+
+    .text__position {
+        padding: 27px 0 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header__position {
+        padding: 23px 32px 13px 13px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .empty {
+        height: 72px;
+    }
+
+    .slider-wrapper {
+        padding: 17px 0px;
+        height: 220px;
+    }
+
+    .slider__arrow {
+        padding: 79px 9px;
+    }
+
+    .vertical-phone {
+        padding: 2px 21px;
+    }
+
+    .vertical-phone__base {
+        width: 79px;
+        height: 170px;
+        border-radius: 10px;
+    }
+
+    .vertical-phone__display-container {
+        width: 73px;
+        height: 123px;
+        margin: 23px 3px;
+    }
+
+    .vertical-phone__display {
+        width: 220px;
+        margin: -142px -9px;
+    }
+
+    .vertical-phone__shadow {
+        width: 88px;
+    }
+
+    .vertical-phone__cam {
+        margin: 4px 35px;
+        width: 6px;
+        height: 6px;
+    }
+
+    .vertical-phone__speaker {
+        width: 13px;
+        height: 2px;
+        margin: 13px 32px;
+    }
+
+    .vertical-phone__button {
+        margin: 153px 35px;
+        width: 7px;
+        height: 7px;
+    }
+
+    .vertical-phone__button-border {
+        width: 15px;
+        height: 15px;
+        margin: 149px 30px;
+    }
+
+    .horizontal-phone {
+        padding: 41px 6px;
+    }
+
+    .horizontal-phone__base {
+        width: 81px;
+        height: 167px;
+        margin: -38px 0 0 43px;
+        border-radius: 12px;
+    }
+
+    .horizontal-phone__display-container {
+        width: 124px;
+        height: 74px;
+        margin: 9px 22px;
+    }
+
+    .horizontal-phone__display {
+        width: 231px;
+        margin: -52px -59px;
+    }
+
+    .horizontal-phone__shadow {
+        width: 177px;
+    }
+
+    .horizontal-phone__cam {
+        content: "";
+        width: 6px;
+        height: 6px;
+        margin: 42px 152px;
+    }
+
+    .horizontal-phone__speaker {
+        width: 13px;
+        height: 2px;
+        margin: 47px 148px;
+    }
+
+
+
+
+
+
+
 }
